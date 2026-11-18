@@ -1,0 +1,110 @@
+/* Modify this file to add your own custom styles */
+/* Left-align table headers (browsers center <th> by default) */
+th {
+    text-align: left;
+}
+
+/* Dropdown menus in the header nav */
+header nav {
+    align-items: baseline;
+}
+
+header nav .dropdown {
+    position: relative;
+}
+
+header nav .dropdown-toggle {
+    display: inline-block;
+    font: inherit;
+    font-size: 1.5rem;
+    color: inherit;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 0.2em 0.4em;
+    margin-top: 1em;
+    border-radius: var(--radius-sm);
+    transition: background-color 120ms ease;
+}
+
+header nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    min-width: 100%;
+    padding: 0.3em 0;
+    background: var(--bg-color, #fffff8);
+    border: 1px solid var(--highlight-weak);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-sm);
+}
+
+header nav .dropdown-menu a {
+    display: block;
+    margin-top: 0;
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+header nav .dropdown:hover .dropdown-menu,
+header nav .dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+header nav .dropdown:hover .dropdown-toggle,
+header nav .dropdown:focus-within .dropdown-toggle {
+    background: var(--highlight-weak);
+}
+
+/* Lecture notes */
+img.lecture-img {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+@media (max-width: 760px) {
+    img.lecture-img {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+}
+
+.slide-gap {
+    height: 12em;
+}
+
+/* Typst emits <blockquote> without an inner <p>; keep it in the text column */
+section > blockquote {
+    width: 50%;
+}
+
+@media (max-width: 760px) {
+    section > blockquote {
+        width: auto;
+    }
+}
+
+/* Images in margin notes fill the margin column */
+.marginnote img.margin-img {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 0.5em;
+}
+
+/* Dark-on-transparent images (e.g. logos): flip to light in dark mode */
+@media (prefers-color-scheme: dark) {
+    img.invert-dark {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}
+
+/* Larger code blocks (Tufte CSS default is 0.9rem); long lines may extend
+   into the margin column instead of being cut off (Tufte default: 52.5%) */
+pre > code {
+    font-size: 1.1rem;
+    width: max-content;
+    max-width: 87.5%;
+}

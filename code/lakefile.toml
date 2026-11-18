@@ -1,0 +1,7 @@
+name = "cse130"
+defaultTargets = ["Lectures"]
+
+# One module per lecture: code/Lectures/<Name>.lean
+[[lean_lib]]
+name = "Lectures"
+globs = ["Lectures.+"]
