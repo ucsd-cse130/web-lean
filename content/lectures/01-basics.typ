@@ -339,21 +339,31 @@ If a test fails, the _file does not compile_.
 
 == EXERCISE: `myMax`
 
-Write a function `myMax` that returns the _maximum_ of two inputs
+Write a function that returns the _maximum_ of two inputs
 
 *1. Tests*
 
 #code("myMax-tests")
 
-*2. Type & 3. Code*
+*2. Type*
 
 #code("myMax")
+
+*3. Code:* Fill in the `???` above
+
+*4. Properties*
+
+```lean
+def myMax (a b : Int) : Int :=
+  if a ≥ b then a else b
+```
+
 
 #gap
 
 == EXERCISE: `abs`
 
-Write a function `abs` that returns the _absolute value_ of an `Int`
+Write a function that returns the _absolute value_ of an `Int`
 
 *1. Tests*
 

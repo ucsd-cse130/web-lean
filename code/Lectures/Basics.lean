@@ -161,7 +161,8 @@ end QuizFun
 /-! ## EXERCISE: myMax -/
 
 -- ANCHOR: myMax
-def myMax (x y : Int) : Int := /-?-/if x ≥ y then x else y/-?-/
+def myMax (x y : Int) : Int :=
+  /-?-/if x ≥ y then x else y/-?-/
 -- ANCHOR_END: myMax
 
 -- ANCHOR: myMax-tests
